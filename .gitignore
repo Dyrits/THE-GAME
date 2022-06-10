@@ -1,0 +1,18 @@
+# Node
+node_modules/
+.env
+
+# Artifacts
+artifacts/
+
+# Cache
+cache/
+
+# Yarn
+yarn-error.log
+
+# Webpack
+dist/
+
+# JetBrains
+.idea/
