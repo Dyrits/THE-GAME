@@ -17,7 +17,7 @@ describe("Hero.sol --", function () {
 
     it("-- should fail at creating a hero because of an insufficient payment", async function () {
         let error;
-        try { await contract.createHero(0, { value: ethers.utils.parseEther("0.45") }); }
+        try { await contract.createHero(0, { value: ethers.utils.parseEther("0.045") }); }
         catch ($error) { error = $error; }
         expect(error.message.includes("Please send more money!")).to.equal(true);
     });
