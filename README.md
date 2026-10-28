@@ -6,6 +6,10 @@ A Solidity smart contract game with a Hardhat development setup and a TypeScript
 
 This project contains a Hero smart contract written in Solidity (`contracts/Hero.sol`, with `TestHero.sol`), Hardhat tests (`test/Hero.ts`), a deployment script (`scripts/deploy.ts`), and a small TypeScript front end (`src/index.ts` and `src/index.html`) bundled with webpack.
 
+### Course
+
+Frontend Masters - A Tour of Web 3: Ethereum & Smart Contracts with Solidity (per the repository's original description).
+
 ### Built With
 
 - Solidity
