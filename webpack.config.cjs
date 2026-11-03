@@ -42,7 +42,7 @@ module.exports = {
         }),
     ],
 
-    watch: true,
+    watch: false,
 
     devServer: {
         historyApiFallback: true,
