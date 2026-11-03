@@ -62,3 +62,11 @@ Frontend Masters - A Tour of Web 3: Ethereum & Smart Contracts with Solidity (pe
 ## License
 
 MIT is declared in `package.json`; no license file is present in this repository.
+
+## Dependency maintenance
+
+Use Node.js 26.13.0 LTS (see `.nvmrc`) and Yarn 1.22.22. This project now uses Hardhat 3, ethers 6, TypeScript 6 and matching ethers/Mocha plugins. Waffle and its old Ganache dependency tree have been removed. Contracts and Solidity 0.8.10 are unchanged.
+
+Run `yarn install --frozen-lockfile`, `yarn test`, `yarn typecheck`, and `yarn build`. The webpack build exits instead of watching indefinitely. The local Hardhat tests use disposable simulated accounts; they do not send money or deploy to a live chain. Browser use still requires an injected wallet and a configured `CONTRACT_ADDRESS`.
+
+Hardhat 3's built-in `--gas-stats` replaces the old gas-reporter plugin, and `yarn test` displays the new gas table. Remaining dependency advisories include Hardhat/plugin zod 3 and Mocha glob/minimatch. Do not force zod 4 into the zod 3 plugin API. No production deployment or wallet was tested.

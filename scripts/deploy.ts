@@ -1,15 +1,14 @@
-import "@nomiclabs/hardhat-ethers";
-import { ethers } from "hardhat";
+import { network } from "hardhat";
+const { ethers } = await network.create();
 
-// @ts-ignore
-async function getContract(contractName) {
+async function getContract(contractName: string) {
     const factory = await ethers.getContractFactory(contractName);
     const contract = await factory.deploy();
-    await contract.deployed();
+    await contract.waitForDeployment();
     return contract;
 }
 
-async function deploy(contractName) {
+async function deploy(contractName: string) {
     return await getContract(contractName);
 }
 
